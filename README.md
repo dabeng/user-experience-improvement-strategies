@@ -2,7 +2,7 @@
 There are no jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible ways or best practices to improve user experience with native javascript.
 Of course, if you want, you can build any plugins or components based on these improvement strategies.
 
-### Do not make a distraction when user is doing a series of operation.
+### Avoid making a distraction when user is doing a series of operation.
 
 ### Make full use of keys -- Tab, Shift, ↑, ↓, ←, etc.
 
@@ -14,8 +14,12 @@ Of course, if you want, you can build any plugins or components based on these i
 
 ### Do not overuse scrollbars.
 * Anytime, do not keep more than 3 parallel horizontal scrollbars in the full browser width view.
-* Do not nest div with scrollbars.
+* Do not nest divs with scrollbar.
 
 ### Anytime, we just provide users with only one edit status.
 
 ### Replace the abrupt alerts with customized warnning messages.
+
+### Do not overuse UI libraries.
+
+### Do not overuse pagination, maybe the filter + dynamic loading is engouh.
