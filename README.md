@@ -4,6 +4,8 @@ Of course, if you want, you can build any plugins or components based on these i
 
 ### Avoid making a distraction when user is doing a series of operation.
 
+### Do not make interface shake.
+
 ### Make full use of keys -- Tab, Shift, ↑, ↓, ←, etc.
 
 ### Provide progress bar, loading spinner or any visible tips for long-running operations.
