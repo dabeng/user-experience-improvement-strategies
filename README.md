@@ -29,3 +29,5 @@ Of course, if you want, you can build any plugins or components based on these i
 ### For comments or logs section, appropriate identation is necessary.
 
 ### For division or classification tasks, drag-drop operation is a good choice.
+
+### The short menu should not scroll as the long document body scrolls.
