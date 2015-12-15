@@ -32,4 +32,4 @@ Of course, if you want, you can build any plugins or components based on these i
 
 ### For division or classification tasks, drag-drop operation is a good choice.
 
-### The short menu should not scroll as the long document body scrolls.
+### When you got a long scrollbar, you need to think about which elements should be kept fixed(e.g. navigation bar)and which elements should be hidden. 
