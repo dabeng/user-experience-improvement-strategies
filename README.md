@@ -1,6 +1,5 @@
 # User Experience Improvement Strategies
-There are no jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible ways or best practices to improve user experience with native javascript.
-Of course, if you want, you can build any plugins or components based on these improvement strategies.
+The key points are not jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible solutions, reasonable thoughts and friendly reminders to improve user experience with the help of javascript.
 
 ### Avoid making a distraction when user is doing a series of operation.
 
