@@ -1,0 +1,10 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill="#003f7f" stroke="#007fff" stroke-width="7" stroke-linejoin="null" stroke-linecap="null" cx="316.03602" cy="242.632573" id="svg_8" rx="312.157967" ry="193.355679" transform="rotate(-0.18542258441448212 316.0360107421954,242.63256835937412) "/>
+  <text fill="#ffffff" stroke="#007fff" stroke-width="3" x="181.35791" y="266.551185" id="svg_2" font-size="92" font-family="Monospace" text-anchor="middle" xml:space="preserve" font-weight="bold" transform="matrix(2.1042740207273596,0,0,2.0426194902803445,-222.12709150087875,-235.12178748862573) ">JS</text>
+  <ellipse fill="#003f7f" stroke="#007fff" stroke-width="5" stroke-linejoin="null" stroke-linecap="null" cx="131" cy="149" id="svg_9" rx="1" ry="1"/>
+  <text fill="#ffffff" stroke="#007fff" stroke-width="3" stroke-linejoin="null" stroke-linecap="null" x="362.892468" y="276.178462" id="svg_10" font-size="92" font-family="Monospace" text-anchor="middle" xml:space="preserve" transform="matrix(7.117329595292944,0,0,5.603419122701408,-2111.32528704665,-1116.5301726863825) ">D</text>
+ </g>
+</svg>
