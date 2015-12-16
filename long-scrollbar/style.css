@@ -1,11 +1,73 @@
+/* customized bootstrap navbar styles */
+.navbar-default {
+  background-color: #337ab7;
+  border-color: rgba(17, 8, 101, 0.5);
+  font-weight: bold;
+}
+.navbar-default .navbar-brand {
+  color: #cdddf7;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #cdddf7;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #cdddf7;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #110865;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #110865;
+}
+.navbar-default .navbar-toggle {
+  border-color: #110865;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #110865;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #cdddf7;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #cdddf7;
+}
+.navbar-default .navbar-link {
+  color: #cdddf7;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #cdddf7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #110865;
+  }
+}
+
 .page-header {
-  padding: 30px;
-  margin-top: 20px; 
+  padding: 20px;
+  margin-top: 10px; 
 }
 
 .page-header h1 {
   font-weight: bold;
-  font-size: 64px;
+  font-size: 48px;
 }
 
 p {
