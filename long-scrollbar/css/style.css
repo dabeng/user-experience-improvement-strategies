@@ -62,7 +62,8 @@
 
 .page-header {
   padding: 20px;
-  margin-top: 10px; 
+  margin-top: 10px;
+  background-color: #110865;
 }
 
 .page-header h1 {
@@ -75,28 +76,32 @@ p {
   font-size: 1.2em;
 }
 
+.page-footer {
+  background-color: #110865;
+  color: #ccc;
+}
+
 .page-footer address {
   margin-top: 30px;
 }
 
+.page-footer a {
+  color: #ccc;
+}
+
+.page-footer a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.page-footer a:active {
+  color: #fff;
+}
+
+.page-footer a:visited {
+  color: #fff;
+}
+
 .logo {
 	height: 120px;
-}
-
-.page-note {
-	background-color: rgba(255, 204, 51, 0.5);
-	text-align: center;
-	padding: 10px 0;
-	position: fixed;
-  bottom: 0;
-  width: calc(100% - 30px);
-}
-
-.page-note.above-page-footer {
-	position: absolute;
-	bottom: 120px;
-}
-
-#btn-joinus {
-	width: 30%;
 }

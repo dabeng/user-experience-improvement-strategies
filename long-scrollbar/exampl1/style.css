@@ -1,0 +1,5 @@
+.navbar.fixed-mode {
+  position: fixed;
+  top: 10px;
+  width: calc(100% - 30px);
+}
