@@ -79,6 +79,8 @@ p {
 .page-footer {
   background-color: #110865;
   color: #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .page-footer address {
