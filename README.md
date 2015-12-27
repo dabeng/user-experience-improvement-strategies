@@ -8,13 +8,13 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 ### 1. Coding
 
-#### Do not overuse UI libraries.
+**Do not overuse UI libraries.**
 
-#### Do not mix up UI libraries as far as possible.
+**Do not mix up UI libraries as far as possible.**
 
 ### 2. Layout
 
-#### Do not make interface shake.
+**Do not make interface shake.**
 
 **Anytime, we just provide users with only one edit status**
 
