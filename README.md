@@ -1,34 +1,49 @@
 # User Experience Improvement Strategies
 The key points are not jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible solutions, reasonable thoughts and friendly reminders to improve user experience with the help of javascript.
-##Ⅰ What elements do you think an excellent User Experience of Web apps should possess?
-### Avoid making a distraction when user is doing a series of operation.
+##Ⅰ. What elements do you think an excellent User Experience of web apps should possess?
 
-### Do not make interface shake.
+## Ⅱ. We got the following main direction of attack on hand.
+ 
+## Ⅲ. Acculated  tips or tricks.
 
-### Make full use of keys -- Tab, Shift, ↑, ↓, ←, etc.
+### Coding
 
-### Provide progress bar, loading spinner or any visible tips for long-running operations.
+#### Do not overuse UI libraries.
 
-### Do not overuse modals.
+#### Do not mix up UI libraries as far as possible.
 
-### Anytime, the screenshot of your application should be unnderstood unambiguously. 
+### Layout
 
-### Do not overuse scrollbars.
+#### Do not make interface shake.
+
+#### Anytime, we just provide users with only one edit status.
+
+#### Anytime, the screenshot of your application should be unnderstood unambiguously. 
+
+#### Do not overuse modals.
+
+#### Do not overuse scrollbars.
 * Anytime, do not keep more than 3 parallel horizontal scrollbars in the full browser width view.
 * Do not nest divs with scrollbar.
 
-### Anytime, we just provide users with only one edit status.
+#### When you got a long scrollbar, you need to think about which elements should be kept fixed(e.g. navigation bar)and which elements should be hidden. 
 
-### Replace the abrupt alerts with customized warnning messages.
+#### For comments or logs section, appropriate identation is necessary.
 
-### Do not overuse UI libraries.
+### Usability and Friendliness
 
-### Do not overuse pagination, maybe the filter + dynamic loading is engouh.
+#### Make full use of keys -- Tab, Shift, ↑, ↓, ←, etc.
 
-### CSS animations are always preferred than JS animations.
+#### Provide progress bar, loading spinner or any visible tips for long-running operations.
 
-### For comments or logs section, appropriate identation is necessary.
+#### For division or classification tasks, drag-drop operation is a good choice.
 
-### For division or classification tasks, drag-drop operation is a good choice.
+#### Avoid making a distraction when user is doing a series of operation.
 
-### When you got a long scrollbar, you need to think about which elements should be kept fixed(e.g. navigation bar)and which elements should be hidden. 
+#### Do not overuse pagination, maybe the filter + dynamic loading is engouh.
+
+#### Replace the abrupt alerts with customized warnning messages.
+
+### Animation
+
+#### CSS animations are always preferred than JS animations.
