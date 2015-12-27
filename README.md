@@ -22,7 +22,7 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 #### Do not overuse modals.
 
-#### Do not overuse scrollbars.
+**Do not overuse scrollbars.**
 * Anytime, do not keep more than 3 parallel horizontal scrollbars in the full browser width view.
 * Do not nest divs with scrollbar.
 
