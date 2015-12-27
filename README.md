@@ -6,13 +6,13 @@ The key points are not jQuery plugins, Angular directives, React components or P
  
 ## Ⅲ. Acculated  tips or tricks.
 
-### Coding
+### 1. Coding
 
 #### Do not overuse UI libraries.
 
 #### Do not mix up UI libraries as far as possible.
 
-### Layout
+### 2. Layout
 
 #### Do not make interface shake.
 
@@ -30,7 +30,7 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 #### For comments or logs section, appropriate identation is necessary.
 
-### Usability and Friendliness
+### 3. Usability and Friendliness
 
 #### Make full use of keys -- Tab, Shift, ↑, ↓, ←, etc.
 
@@ -44,6 +44,6 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 #### Replace the abrupt alerts with customized warnning messages.
 
-### Animation
+### 4. Animation
 
 #### CSS animations are always preferred than JS animations.
