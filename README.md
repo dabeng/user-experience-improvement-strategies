@@ -1,15 +1,18 @@
 # User Experience Improvement Strategies
 The key points are not jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible solutions, reasonable thoughts and friendly reminders to improve user experience with the help of javascript.
 ##Ⅰ. What elements do you think an excellent User Experience of web apps should possess?
-1. ★The app should have its own distinct layout and theme color that impressed the people event though they don't often use this app. In short, creating **peculiar UI style** for your app.  
-2. ★★Without the help of user manual or user guide, target users can easily master the most of functionalites. Maybe 80% is an appropriate proportion. In short, highlighting the **usability** and **friendliness**.
-3. ★★★Displaying business data naturally, abstracting the business operation procedures and **improving work efficiency**. 
-4. ★★★★If users can smoothly finish their  all  tasks on the current UI, moreover it's a good trip for users,we can claim that the app have an excellent user experiecnce. In short, users **like UI and enjoy UI**.
+1. ★ The app should have its own distinct layout and theme color that impressed the people event though they don't often use this app. In short, creating **peculiar UI style** for your app.  
+2. ★★ Without the help of user manual or user guide, target users can easily master the most of functionalites. Maybe 80% is an appropriate proportion. In short, highlighting the **usability** and **friendliness**.
+3. ★★★ Displaying business data naturally, abstracting the business operation procedures and **improving work efficiency**. 
+4. ★★★★ If users can smoothly finish their  all  tasks on the current UI, moreover it's a good trip for users,we can claim that the app have an excellent user experiecnce. In short, users **like and enjoy UI**.
+5. Here, ★ represents the difficulty level of accomplishing.
 
 ## Ⅱ. We got the following main direction of attack on hand.
-1. consistent UI layout and theme color
-2. apply well-designed UI widdgets(components or plugins)
-3. refactor 
+1. consistent UI layout and theme color.
+2. apply well-designed UI widdgets(components or plugins).
+3. add animation effect to the existing static dom snippets.
+4. refactor the work flow to provide more clean and natural UI.
+5. remove the excessive packaging of UI interactions and recover the behavior of data displaying and data processing to its original state.
 
 ## Ⅲ. Acculated  tips or tricks.
 
@@ -54,3 +57,13 @@ Replace the abrupt alerts with customized warnning messages.
 ### 4. Animation
 
 CSS animations are always preferred than JS animations.
+
+### 5. Breaking Tradition
+
+Allow the existence of overlap.
+
+Allow the existence of asymmetry.
+
+Allow the existence of asynchronous operations.
+
+
