@@ -56,7 +56,10 @@ Replace the abrupt alerts with customized warnning messages.
 
 ### 4. Animation
 
-CSS animations are always preferred than JS animations.
+CSS animations are always preferred than JS animations, because generally accomplishing the same effect requires less code amount based on css.
+
+The excessive animation may drag down page performance or distract users from their serious work.
+
 
 ### 5. Breaking Tradition
 
