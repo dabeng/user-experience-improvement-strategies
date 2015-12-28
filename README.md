@@ -1,5 +1,7 @@
 # User Experience Improvement Strategies
 The key points are not jQuery plugins, Angular directives, React components or Polymer elements in here. We just share feasible solutions, reasonable thoughts and friendly reminders to improve user experience with the help of javascript.
+**Note:** all the content of this artical is based on discussions and thoughts about improving User Experience of destop app of industrial business system.
+
 ##Ⅰ. What elements do you think an excellent User Experience of web apps should possess?
 1. ★ The app should have its own distinct layout and theme color that impressed the people event though they don't often use this app. In short, creating **peculiar UI style** for your app.  
 2. ★★ Without the help of user manual or user guide, target users can easily master the most of functionalites. Maybe 80% is an appropriate proportion. In short, highlighting the **usability** and **friendliness**.
@@ -8,11 +10,12 @@ The key points are not jQuery plugins, Angular directives, React components or P
 5. Here, ★ represents the difficulty level of accomplishing.
 
 ## Ⅱ. We got the following main direction of attack on hand.
-1. consistent UI layout and theme color.
-2. apply well-designed UI widdgets(components or plugins).
-3. add animation effect to the existing static dom snippets.
-4. refactor the work flow to provide more clean and natural UI.
-5. remove the excessive packaging of UI interactions and recover the behavior of data displaying and data processing to its original state.
+1. Consistent UI layout and theme color.
+2. Apply well-designed UI widdgets(components or plugins).
+3. Add animation effect to the existing static dom snippets.
+4. Refactor the work flow to provide more clean and natural UI.
+5. Remove the excessive packaging of UI interactions and recover the behavior of data displaying and data processing to its original state.
+6. Draw inspiration from mobile apps.
 
 ## Ⅲ. Acculated  tips or tricks.
 
