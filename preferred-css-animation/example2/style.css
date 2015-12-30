@@ -1,0 +1,27 @@
+.subhead {
+  cursor: pointer;
+}
+
+.para {
+  max-height: 200px;
+  overflow: hidden;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+
+.para.collapsed-item {
+   max-height: 0px;
+   opacity: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#btn-toggle {
+  font-weight: bold;
+}
