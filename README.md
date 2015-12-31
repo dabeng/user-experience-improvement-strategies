@@ -41,7 +41,8 @@ Do not overuse scrollbars.
 * Do not nest divs with scrollbar.
 
 When you got a long scrollbar, you need to think about which elements should be kept fixed(e.g. navigation bar)and which elements should be hidden.
-![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl1/screen-record.git)
+
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl1/screen-record.gif)
 
 For comments or logs section, appropriate identation is necessary.
 
