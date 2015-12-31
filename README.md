@@ -44,6 +44,8 @@ When you got a long scrollbar, you need to think about which elements should be 
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl1/screen-record.gif)
 
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl2/screen-record.gif)
+
 For comments or logs section, appropriate identation is necessary.
 
 ### 3. Usability and Friendliness
