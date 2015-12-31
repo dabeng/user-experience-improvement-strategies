@@ -42,11 +42,11 @@ Do not overuse scrollbars.
 
 When you got a long scrollbar, you need to think about which elements should be kept fixed and which elements should be hidden.
 
-e.g. navigation bar
+example 1. navigation bar on the top of page
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl1/screen-record.gif)
-<hr>
-e.g. import infomation bar
+
+example 2. important infomation bar on the bottom of page
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl2/screen-record.gif)
 
