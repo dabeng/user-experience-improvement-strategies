@@ -43,9 +43,11 @@ Do not overuse scrollbars.
 When you got a long scrollbar, you need to think about which elements should be kept fixed and which elements should be hidden.
 
 e.g. navigation bar
+
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl1/screen-record.gif)
 <hr>
-e.g. import infomation bar 
+e.g. import infomation bar
+
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/exampl2/screen-record.gif)
 
 For comments or logs section, appropriate identation is necessary.
