@@ -19,6 +19,7 @@
 
     if (!stop) {
       elem.style.height = ((elem.clientHeight - 10) > 0 ? (elem.clientHeight - 10) : 0 ) + 'px';
+      elem.style.opacity = window.parseFloat(window.getComputedStyle(elem).getPropertyValue('opacity')) - 0.1;
       requestAnimationFrame(function() {
         collapseItemId = collapseItem(elem);
       });
@@ -30,19 +31,21 @@
       cancelAnimationFrame(expandItemsId);
     }
     var stop = true;
-    var answers = document.querySelectorAll('.para');
-    for (var i = 0; i < answers.length; i++) {
-      if (answers[i].clientHeight > 0) {
+    var paras = document.querySelectorAll('.para');
+    for (var i = 0; i < paras.length; i++) {
+      if (paras[i].clientHeight > 0) {
         stop = false;
       }
     }
     if (!stop) {
-      for (i = 0; i < answers.length; i++) {
-        answers[i].previousElementSibling.classList.add('collapse-mode');
-        if ((answers[i].clientHeight - 10) < 10) {
-          answers[i].style.height = '0px';
+      for (i = 0; i < paras.length; i++) {
+        paras[i].previousElementSibling.classList.add('collapse-mode');
+        if ((paras[i].clientHeight - 10) < 10) {
+          paras[i].style.height = '0px';
+          paras[i].style.opacity = 0;
         } else {
-          answers[i].style.height = (answers[i].clientHeight - 10) + 'px';
+          paras[i].style.height = (paras[i].clientHeight - 10) + 'px';
+          paras[i].style.opacity = window.parseFloat(window.getComputedStyle(paras[i]).getPropertyValue('opacity')) - 0.1;
         }
       }
       collapseItemsId = requestAnimationFrame(collapseItems);
@@ -61,6 +64,7 @@
     if (!stop) {
       if (elem.scrollHeight > elem.clientHeight) {
         elem.style.height = (elem.clientHeight + 10) + 'px';
+        elem.style.opacity = window.parseFloat(window.getComputedStyle(elem).getPropertyValue('opacity')) + 0.1;
       }
       requestAnimationFrame(function() {
         expandItemId = expandItem(elem);
@@ -73,17 +77,22 @@
       cancelAnimationFrame(collapseItemsId);
     }
     var stop = true;
-    var answers = document.querySelectorAll('.para');
-    for (var i = 0; i < answers.length; i++) {
-      if (answers[i].scrollHeight > answers[i].clientHeight) {
+    var paras = document.querySelectorAll('.para');
+    for (var i = 0; i < paras.length; i++) {
+      if (paras[i].scrollHeight > paras[i].clientHeight) {
         stop = false;
       }
     }
     if (!stop) {
-      for (i = 0; i < answers.length; i++) {
-        if (answers[i].scrollHeight > answers[i].clientHeight) {
-          answers[i].previousElementSibling.classList.remove('collapse-mode');
-          answers[i].style.height = (answers[i].clientHeight + 10) + 'px';
+      for (i = 0; i < paras.length; i++) {
+        if (paras[i].scrollHeight > paras[i].clientHeight) {
+          paras[i].previousElementSibling.classList.remove('collapse-mode');
+          paras[i].style.height = (paras[i].clientHeight + 10) + 'px';
+          if (paras[i].scrollHeight - paras[i].clientHeight < 10) {
+            paras[i].style.opacity = 1.0;
+          } else {
+            paras[i].style.opacity = window.parseFloat(window.getComputedStyle(paras[i]).getPropertyValue('opacity')) + 0.1;
+          }
         }
       }
       expandItemsId = requestAnimationFrame(expandItems);
