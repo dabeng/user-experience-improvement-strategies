@@ -69,13 +69,14 @@ Replace the abrupt alerts with customized warnning messages.
 ### 4. Animation
 
 CSS animations are always preferred than JS animations, because generally accomplishing the same effect requires less code amount based on css.
-[example 1. pure js animation(130 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/exampl1/)
 
-![screen record](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/exampl1/screen-record.gif)
+[example 1. pure js animation(130 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/example1/)
 
-[example 2. jquery addClass/removeClass + css transition(30 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/exampl2/)
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/example1/screen-record.gif)
 
-![screen record](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/exampl2/screen-record.gif)
+[example 2. jquery addClass/removeClass + css transition(30 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/example2/)
+
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/preferred-css-animation/example2/screen-record.gif)
 
 The excessive animation may drag down page performance or distract users from their serious work.
 
