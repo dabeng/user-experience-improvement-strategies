@@ -42,11 +42,11 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 * When you got a long scrollbar, you need to think about which elements should be kept fixed and which elements should be hidden.
 
-[example 1. navigation bar on the top of page](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example1/)
+[example 1 - navigation bar on the top of page](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example1/)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example1/screen-record.gif)
 
-[example 2. important infomation bar on the bottom of page](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example2/)
+[example 2 - important infomation bar on the bottom of page](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example2/)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/long-scrollbar/example2/screen-record.gif)
 
@@ -70,17 +70,17 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 * CSS animations are always preferred than JS animations, because generally accomplishing the same effect requires less code amount based on css.
 
-[example 1. pure js animation(130 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/animation/example1/)
+[example 1 - pure js animation(130 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/animation/example1/)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/example1/screen-record.gif)
 
-[example 2. jquery addClass/removeClass + css transition(30 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/animation/example2/)
+[example 2 - jquery addClass/removeClass + css transition(30 lines of code)](http://dabeng.github.io/user-experience-improvement-strategies/animation/example2/)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/example2/screen-record.gif)
 
 * CSS animation(transition, 2D transform, 3D transform, keyframes) is perfect for simple and small interactions, like hover states, show/hide control, basic data displaying, etc. Let's look at a living example to have a good grasp on -- to what degree css can implement animations.
 
-[example thanks Julian Garnier for his great work -- 3D CSS Solar System](http://codepen.io/juliangarnier/pen/idhuG)
+[example - thanks Julian Garnier for his great work -- 3D CSS Solar System](http://codepen.io/juliangarnier/pen/idhuG)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/css-3d-solar-system.gif)
 
