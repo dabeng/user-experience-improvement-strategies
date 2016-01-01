@@ -78,11 +78,19 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/example2/screen-record.gif)
 
-* CSS animation(transition, 2D transform, 3D transform, keyframes) is perfect for simple and small interactions, like hover states, show/hide control, basic data displaying, etc. Let's look at a living example to have a good grasp on -- to what degree css can implement animations.
+* CSS animation(transition, 2D transform, 3D transform, keyframes) is perfect for simple and small interactions, like hover states, show/hide control, basic data displaying, etc. Let's look at a living example to have a good grasp on -- to what degree css can make animations.
 
 [example - thanks Julian Garnier for his great work -- 3D CSS Solar System](http://codepen.io/juliangarnier/pen/idhuG)
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/css-3d-solar-system.gif)
+
+* If your demand is just adding dynamic effect to some static dom elements, maybe [Animate.css](http://daneden.github.io/animate.css/) is a good help. 
+
+* If your demand includes manuplating more details of animation itself, I suggest you'd better find a specialized animation library, like [Velocity.js](http://julian.com/research/velocity/).
+
+example - Let's look at a living example to have a good grasp on -- to what degree Velocity.js can make animations.
+
+![velocity.js demo](http://dabeng.github.io/user-experience-improvement-strategies/animation/velocityjs-demo.gif)
 
 * The excessive animation may drag down page performance or distract users from their serious work.
 
