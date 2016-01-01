@@ -88,7 +88,7 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 * If your demand includes manuplating more details of animation itself, I suggest you'd better find a specialized animation library, like [Velocity.js](http://julian.com/research/velocity/).
 
-example - Let's look at a living example to have a good grasp on -- to what degree Velocity.js can make animations.
+[example - Let's look at a living example to have a good grasp on -- to what degree Velocity.js can make animations.](http://codepen.io/sol0mka/pen/kzyjJ)
 
 ![velocity.js demo](http://dabeng.github.io/user-experience-improvement-strategies/animation/velocityjs-demo.gif)
 
