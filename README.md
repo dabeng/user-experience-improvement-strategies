@@ -94,8 +94,11 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 * The excessive animation may drag down page performance or distract users from their serious work.
 
+### 5. Performance
 
-### 5. Breaking Tradition
+* lazy loading images
+
+### 6. Breaking Tradition
 
 * Allow the existence of overlap.
 
