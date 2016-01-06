@@ -96,6 +96,8 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 ### 5. Performance
 
+* Page loading speed
+* Response speed of user's manipulation
 * lazy loading images
 
 ### 6. Breaking Tradition
