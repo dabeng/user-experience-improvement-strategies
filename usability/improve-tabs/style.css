@@ -23,7 +23,6 @@
 
 .nav-tabs > li.active > a > .highlight {
   height: calc(100% + 2px);
-  border-bottom: 1px solid #fff;
 }
 
 .nav-tabs > li.active > a:focus {
