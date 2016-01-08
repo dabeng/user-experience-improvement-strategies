@@ -17,7 +17,7 @@
   z-index: -1;
   transition: height 0.2s;
   -moz-transition: height 0.2s;
-  -webkit-transition: height 0.2s cubic-bezier(.62,.11,.69,1.58);/*cubic-bezier(.62,.11,.69,1.58);*/
+  -webkit-transition: height 0.2s cubic-bezier(.62,.11,.69,1.58);
   -o-transition: height 0.2s;
 }
 
@@ -42,6 +42,13 @@
 .nav-tabs > li > a:hover {
   background-color: rgba(51, 122, 183, 0.8);
   color: #fff;
+  border-color: transparent;
+}
+
+.nav-tabs > li.active > a:hover {
+  border-color: transparent;
+  border-bottom: 1px solid #fff;
+  color: #337ab7;
 }
 
 .change-border-color {
