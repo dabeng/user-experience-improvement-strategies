@@ -4,7 +4,7 @@
 .nav-tabs {
   border-bottom: 1px solid #337ab7;
 }
-.nav-tabs > li > a > .highlight {
+.nav-tabs > li > a > .bounce {
   display: block;
   position: absolute;
   width: calc(100% + 2px);
@@ -21,7 +21,7 @@
   -o-transition: height 0.2s;
 }
 
-.nav-tabs > li.active > a > .highlight {
+.nav-tabs > li.active > a > .bounce {
   height: calc(100% + 2px);
 }
 
@@ -33,8 +33,10 @@
 }
 
 .nav-tabs > li > a:hover {
-  background-color: rgba(51, 122, 183, 0.8);
-  color: #fff;
+  /*background-color: rgba(51, 122, 183, 0.8);*/
+  background-color: transparent;
+  color: #449d44;
+  /*text-shadow: 0 0 18px blue;*/
   border-color: transparent;
 }
 
