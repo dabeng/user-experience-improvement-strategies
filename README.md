@@ -4,7 +4,7 @@ The key points are not jQuery plugins, Angular directives, React components or P
 **Note:** all the content of this artical is based on discussions and thoughts about improving User Experience of destop app of industrial business system.
 
 ##Ⅰ. What elements do you think an excellent User Experience of web apps should possess?
-1. ★ The app should have its own distinct layout and theme color that impressed the people event though they don't often use this app. In short, creating **peculiar UI style** for your app.  
+1. ★ The app should have its own distinct layout and theme color that can impress the people eventthough they don't often use this app. In short, creating **peculiar UI style** for your app.  
 2. ★★ Without the help of user manual or user guide, target users can easily master the most of functionalites. Maybe 80% is an appropriate proportion. In short, highlighting the **usability** and **friendliness**.
 3. ★★★ Displaying business data naturally, abstracting the business operation procedures and **improving work efficiency**. 
 4. ★★★★ If users can smoothly finish their  all  tasks on the current UI, moreover it's a good trip for users,we can claim that the app have an excellent user experiecnce. In short, users **like and enjoy UI**.
