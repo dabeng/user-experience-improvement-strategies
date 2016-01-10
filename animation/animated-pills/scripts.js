@@ -3,21 +3,19 @@
 
 (function($){
 
+  function highlightPill(pill) {
+    $('.nav-pills').find('.highlight').css({
+      'width': pill.width(),
+      'left': pill.position().left + window.parseFloat($('.nav-pills').find('li').css('margin-left'))
+    });
+  }
+
   $(function() {
 
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-      // e.target // newly activated tab
-      // e.relatedTarget.style['border-bottom-color']='#fff'; // 
-      var preTab = e.relatedTarget;// previous active tab
-      // removing the class
-      preTab.classList.remove('change-border-color');
-  
-      // -> triggering reflow /* The actual magic */
-      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-      preTab.style.offsetWidth = preTab.offsetWidth;
-  
-      // re-adding the class
-      preTab.classList.add('change-border-color');
+    highlightPill($('.nav-pills').find('.active'));
+
+    $('.nav-pills').children().on('mouseenter', function (event) {
+      highlightPill($(event.target.parentNode));
     });
 
   });

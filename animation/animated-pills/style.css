@@ -1,3 +1,28 @@
+.nav-pills {
+  position: relative;
+}
+
+.nav-pills>li:first-child {
+  margin-left: 10px;
+}
+
 .nav-pills>li+li {
   margin-left: 10px;
+}
+
+.nav-pills>li>a:hover {
+  background-color: transparent;
+}
+
+.nav-pills>.highlight {
+  position: absolute;
+  margin-left: 0px;
+  border-radius: 4px;
+  height: 100%;
+  z-index: -1;
+  background-color: #eee;
+  transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
+  -moz-transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
+  -webkit-transition: all 0.3s cubic-bezier(.62,.11,.69,1.58);
+  -o-transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
 }
