@@ -21,8 +21,8 @@
   height: 100%;
   z-index: -1;
   background-color: #eee;
-  transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
-  -moz-transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
-  -webkit-transition: all 0.3s cubic-bezier(.62,.11,.69,1.58);
-  -o-transition: left 0.2s cubic-bezier(.62,.11,.69,1.58);
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }

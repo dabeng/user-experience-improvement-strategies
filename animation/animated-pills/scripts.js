@@ -18,6 +18,10 @@
       highlightPill($(event.target.parentNode));
     });
 
+    $('.nav-pills').on('mouseleave', function (event) {
+      highlightPill($('.nav-pills').find('.active'));
+    });
+
   });
 
 })(jQuery);
