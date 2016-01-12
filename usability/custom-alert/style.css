@@ -1,0 +1,28 @@
+.nav-pills {
+  position: relative;
+}
+
+.nav-pills>li:first-child {
+  margin-left: 10px;
+}
+
+.nav-pills>li+li {
+  margin-left: 10px;
+}
+
+.nav-pills>li>a:hover {
+  background-color: transparent;
+}
+
+.nav-pills>.highlight {
+  position: absolute;
+  margin-left: 0px;
+  border-radius: 4px;
+  height: 100%;
+  z-index: -1;
+  background-color: #eee;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
