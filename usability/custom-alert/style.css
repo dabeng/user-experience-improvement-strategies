@@ -1,28 +1,58 @@
-.nav-pills {
-  position: relative;
+#alert-overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0px;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.3);
 }
 
-.nav-pills>li:first-child {
-  margin-left: 10px;
+#alert-overlay.show-alert {
+  opacity: 1;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
 }
 
-.nav-pills>li+li {
-  margin-left: 10px;
-}
-
-.nav-pills>li>a:hover {
-  background-color: transparent;
-}
-
-.nav-pills>.highlight {
+.custom-alert {
   position: absolute;
-  margin-left: 0px;
-  border-radius: 4px;
-  height: 100%;
-  z-index: -1;
-  background-color: #eee;
-  transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  max-width: 400px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px 100px 100px 100px;
+  border: 10px solid #eee;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.3s ease 0.3s;
+  -moz-transition: all 0.3s ease 0.3s;
+  -webkit-transition: all 3s ease 2s;
+  -o-transition: all 0.3s ease 0.3s;
+}
+
+.alert-icon {
+  font-size: 200px;
+  color: #eee;
+  line-height: 200px;
+}
+
+.alert-message {
+  color: #aaa;
+}
+
+.alert-buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.alert-buttons button {
+  margin-left: 10px;
+}
+
+.custom-alert.show-message {
+  border-radius: 20px 20px 0px 0px;
+  width: auto;
+  height: auto;
 }
