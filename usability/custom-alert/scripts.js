@@ -6,9 +6,13 @@
   $(function() {
 
     $('#basic-alert').on('click', function (event) {
-      $('#alert-overlay').addClass('show-alert')
-        .find('.custom-alert').addClass('show-message');
+      $('#alert-overlay').addClass('show-alert');
 
+    });
+
+    $('.custom-alert').on('click', '.btn-cancel', function(event) {
+      
+      $('#alert-overlay').removeClass('show-alert');
     });
 
 
