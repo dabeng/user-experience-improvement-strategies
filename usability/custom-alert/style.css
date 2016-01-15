@@ -17,12 +17,12 @@
   overflow: auto;
   position: absolute;
   top: calc(50% - 150px);
-  left: calc(50% - 300px);
-  width: 600px;
+  left: calc(50% - 250px);
+  width: 500px;
   height: auto;
-  min-height: 236px;
+  min-height: 246px;
   border-radius: 2px;
-  border: 2px solid #eee;
+  border: 2px solid #ccc;
   background-color: #fff;
   text-align: center;
 }
@@ -36,14 +36,15 @@
   font-size: 200px;
   color: #eee;
   line-height: 200px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .alert-message {
   margin-top: -100px;
-  padding: 0px 10px;
+  padding: 0px 15px;
   color: #666;
-
+  margin-bottom: 50px;
+  text-align: left;
 }
 
 .alert-buttons {
