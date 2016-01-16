@@ -82,6 +82,10 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 ![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/animated-tabs/screen-record.gif)
 
+* [Animated Bootstrp Pills](http://dabeng.github.io/user-experience-improvement-strategies/animation/animated-pills/)
+
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/animation/animated-pills/screen-record.gif)
+
 * CSS animation(transition, 2D transform, 3D transform, keyframes) is perfect for simple and small interactions, like hover states, show/hide control, basic data displaying, etc. Let's look at a living example to have a good grasp on -- to what degree css can make animations.
 
 [example - thanks Julian Garnier for his great work -- 3D CSS Solar System](http://codepen.io/juliangarnier/pen/idhuG)
