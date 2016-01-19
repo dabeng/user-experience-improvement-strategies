@@ -27,8 +27,12 @@
         .siblings('.btn-cancel').on('click',function() {
           $('#alert-overlay').removeClass('show-alert');
           dtd.resolve(false);
-        })
-        .closest('#alert-overlay').addClass('show-alert');
+        });
+        // With the help of the following line, we enfore browser to repaint in order to
+        // fire up the first time transition of alert icon.
+        var overlay = $('#alert-overlay')[0];
+        overlay.style.offsetWidth = overlay.offsetWidth;
+        overlay.classList.add('show-alert');
     }
 
     return dtd;
