@@ -6,15 +6,13 @@
   $(function() {
 
     $('.btn').on('click', function (event) {
-      $('#alert-overlay').addClass('show-alert')
-        .find('.custom-alert').offset($(event.target).offset());
-
+      $('#alert-overlay').addClass('show-alert');
     });
 
     $('.custom-alert').on('click', '.btn-cancel', function(event) {
       
       $('#alert-overlay').removeClass('show-alert');
-      $(document).scrollTop();
+
     });
 
 

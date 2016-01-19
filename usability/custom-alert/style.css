@@ -1,75 +1,92 @@
-#main-content {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  border: 3px solid #337ab7;
-}
-
-#btn-alert1 {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-#btn-alert2 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#btn-alert3 {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-
-#btn-alert4 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
 #alert-overlay {
-  position: fixed;
-  display: none;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
   background-color: rgba(0,0,0,0.3);
 }
 
 #alert-overlay.show-alert {
-  display: block;
+  opacity: 1;
   overflow: auto;
+  position: fixed;
+  height: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .custom-alert {
-  overflow: auto;
-  position: absolute;
+  position: relative;
+  display: inline-block;
+  margin-top: 200px;
   max-width: 600px;
-  min-width: 300px;
-  height: auto;
-  border-radius: 2px;
+  min-width: 400px;
+  overflow: hidden;
   background-color: #fff;
   text-align: center;
 }
 
+.alert-icon {
+  position: absolute;
+  display: block;
+  font-family: Arial;
+  border: 5px solid #fff;
+  border-radius: 59px;
+  box-shadow: 0 1px 0 #ccc,
+              0 2px 0 #c9c9c9,
+              0 3px 0 #bbb,
+              0 4px 0 #b9b9b9,
+              0 5px 0 #aaa,
+              0 6px 1px rgba(0,0,0,.1),
+              0 0 5px rgba(0,0,0,.1),
+              0 1px 3px rgba(0,0,0,.3),
+              0 3px 5px rgba(0,0,0,.2),
+              0 5px 10px rgba(0,0,0,.25),
+              0 10px 10px rgba(0,0,0,.2),
+              0 20px 20px rgba(0,0,0,.15);
+  top: -20px;
+  right: -20px;
+  width: 118px;
+  height: 118px;
+  line-height: 118px;
+  font-size: 118px;
+  color: #fff;
+  transition: text-shadow 0.3s ease;
+  -moz-transition: text-shadow 0.3s ease;
+  -webkit-transition: text-shadow 0.3s ease;
+  -o-transition: text-shadow 0.3s ease;
+}
+
+#alert-overlay.show-alert .alert-icon {
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
 .alert-message {
-  padding: 20px 15px;
+  position: relative;
+  padding: 20px 100px 20px 15px;
   color: #666;
-  margin-bottom: 40px;
   text-align: left;
 }
 
 .alert-buttons {
-  position: absolute;
   width: 100%;
-  right: 10px;
-  bottom: 10px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
-.alert-buttons button {
+.alert-buttons .btn {
   margin-left: 10px;
 }
+
