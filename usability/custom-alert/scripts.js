@@ -32,36 +32,38 @@
           '<button type="button" class="btn btn-default btn-cancel">Cancel</button>');
       }
     };
-    var bindButtonHandler = function(type, isConfirm) {
-      var btns = $('#alert-overlay').find('.alert-buttons').children();
+    var bindButtonHandler = function(type) {
+      var overlay = $('#alert-overlay');
+      var btns = overlay.find('.alert-buttons').children();
       if (type === 0) {
         btns.on('click', function() {
-          $('#alert-overlay').removeClass('show-alert');
-          $(this).data('dtd').resolve();
+          overlay.removeClass('show-alert')
+            .find('.custom-alert').data('dtd').resolve();
         });
       } else if (type === 1) {
         btns.filter('.btn-ok').on('click', function() {
-          $('#alert-overlay').removeClass('show-alert');
-          $(this).data('dtd').resolve(true);
+          overlay.removeClass('show-alert')
+            .find('.custom-alert').data('dtd').resolve(true);
         })
         .siblings('.btn-cancel').on('click', function() {
-          $('#alert-overlay').removeClass('show-alert');
-          $(this).data('dtd').resolve(false);
+          overlay.removeClass('show-alert')
+            .find('.custom-alert').data('dtd').resolve(false);
         });
       } else {
         btns.filter('.btn-ok').on('click', function() {
-          $('#alert-overlay').removeClass('show-alert');
-          var value = $(this).parent().siblings('.alert-input').val().trim();
-          $(this).parent().siblings('.alert-input').val(defaultText);
-          $(this).data('dtd').resolve(value);
+          var value = overlay.find('.alert-input').val().trim();
+          overlay.removeClass('show-alert')
+            .find('.alert-input').val(defaultText)
+            .parent().data('dtd').resolve(value);
         })
         .siblings('.btn-cancel').on('click', function() {
-          $('#alert-overlay').removeClass('show-alert');
-          $(this).parent().siblings('.alert-input').val(defaultText);
-          $(this).data('dtd').resolve('');
+          overlay.removeClass('show-alert')
+            .find('.alert-input').val(defaultText)
+            .parent().data('dtd').resolve('');
         });
       }
     };
+
     // With the help of the following function, we enfore browser to repaint in order to
     // fire up the first time transition of alert icon.
     var startIconTransition = function() {
@@ -69,6 +71,7 @@
       overlay.style.offsetWidth = overlay.offsetWidth;
       overlay.classList.add('show-alert');
     };
+
     if (type === 0) { // alert box
       if (!$('.custom-alert').length) {
         appendCustomAlert();
@@ -113,9 +116,9 @@
         .siblings('.alert-input').val(defaultText);
     }
 
-    $('#alert-overlay').find('.alert-buttons').children().data('dtd', dtd)
-      .end().siblings('.alert-message').text(message)
-      .closest('#alert-overlay').addClass('show-alert');
+    $('#alert-overlay').addClass('show-alert')
+      .find('.custom-alert').data('dtd', dtd)
+      .find('.alert-message').text(message);
 
     return dtd;
   }
