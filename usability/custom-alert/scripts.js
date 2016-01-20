@@ -3,7 +3,7 @@
 
 (function($){
 
-  function customAlert(type, message) {
+  function customAlert(type, message, defaultText) {
     var dtd = $.Deferred();
     var appendCustomAlert = function() {
       $('body').append(
@@ -14,10 +14,17 @@
             '<div class="alert-buttons"></div>' +
           '</div>' +
         '</div>');
-    }
+    };
+    var cleanupCustomAlert = function() {
+      $('#alert-overlay').find('.alert-buttons').children().remove()
+        .end().siblings('.alert-input').remove();
+    };
+    var appendAlertInput = function() {
+      $('#alert-overlay').find('.alert-message')
+        .after('<input type="text" class="alert-input"/>');
+    };
     var appendAlertButtons = function(type) {
       var alertButtons = $('#alert-overlay').find('.alert-buttons');
-      alertButtons.children().remove();
       if (type === 0) {
         alertButtons.append('<button type="button" class="btn btn-primary btn-ok">OK</button>');
       } else {
@@ -42,7 +49,17 @@
           $(this).data('dtd').resolve(false);
         });
       } else {
-
+        btns.filter('.btn-ok').on('click', function() {
+          $('#alert-overlay').removeClass('show-alert');
+          var value = $(this).parent().siblings('.alert-input').val().trim();
+          $(this).parent().siblings('.alert-input').val(defaultText);
+          $(this).data('dtd').resolve(value);
+        })
+        .siblings('.btn-cancel').on('click', function() {
+          $('#alert-overlay').removeClass('show-alert');
+          $(this).parent().siblings('.alert-input').val(defaultText);
+          $(this).data('dtd').resolve('');
+        });
       }
     };
     // With the help of the following function, we enfore browser to repaint in order to
@@ -59,6 +76,7 @@
         bindButtonHandler(0);
         startIconTransition();
       } else if (!$('.alert-box').length) {
+        cleanupCustomAlert();
         appendAlertButtons(0);
         bindButtonHandler(0);
       }
@@ -71,13 +89,28 @@
         bindButtonHandler(1);
         startIconTransition();
       } else if (!$('.confirm-box').length) {
+        cleanupCustomAlert();
         appendAlertButtons(1);
         bindButtonHandler(1);
       }
       $('#alert-overlay').find('.custom-alert').attr('class', 'custom-alert confirm-box')
         .find('.alert-icon').text('?');
     } else { // prompt box
-
+      if (!$('.custom-alert').length) {
+        appendCustomAlert();
+        appendAlertInput();
+        appendAlertButtons(2);
+        bindButtonHandler(2);
+        startIconTransition();
+      } else if (!$('.prompt-box').length) {
+        cleanupCustomAlert();
+        appendAlertInput();
+        appendAlertButtons(2);
+        bindButtonHandler(2);
+      }
+      $('#alert-overlay').find('.custom-alert').attr('class', 'custom-alert prompt-box')
+        .find('.alert-icon').text(':)')
+        .siblings('.alert-input').val(defaultText);
     }
 
     $('#alert-overlay').find('.alert-buttons').children().data('dtd', dtd)
@@ -122,6 +155,23 @@
           $('#response').text('Yes, let\'s go for it.');
         } else {
           $('#response').text('No, this is not the time.');
+        }
+      });
+    });
+
+    $('#btn-prompt').on('click', function () {
+      /*
+        var username=prompt('Please enter your username', 'Michael Jordan');
+        if (username!=null && username!="") {
+          $('#response').text(username + ', hey, welcome back.');
+        }
+      */
+      var promptBox = customAlert(2, 'Please enter your username', 'Michael Jordan');
+      $.when(promptBox).then(function(res) {
+        if (res) {
+          $('#response').text(res + ', hey, welcome back.');
+        } else {
+          $('#response').text('Anoymous user logs in.');
         }
       });
     });
