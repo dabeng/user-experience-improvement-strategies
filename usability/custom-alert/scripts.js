@@ -5,100 +5,84 @@
 
   function customAlert(type, message) {
     var dtd = $.Deferred();
+    var appendCustomAlert = function() {
+      $('body').append(
+        '<div id="alert-overlay">' +
+          '<div class="custom-alert">' +
+            '<span class="alert-icon"></span>' +
+            '<p class="alert-message"></p>' +
+            '<div class="alert-buttons"></div>' +
+          '</div>' +
+        '</div>');
+    }
+    var appendAlertButtons = function(type) {
+      var alertButtons = $('#alert-overlay').find('.alert-buttons');
+      alertButtons.children().remove();
+      if (type === 0) {
+        alertButtons.append('<button type="button" class="btn btn-primary btn-ok">OK</button>');
+      } else {
+        alertButtons.append('<button type="button" class="btn btn-primary btn-ok">OK</button>' +
+          '<button type="button" class="btn btn-default btn-cancel">Cancel</button>');
+      }
+    };
+    var bindButtonHandler = function(type, isConfirm) {
+      var btns = $('#alert-overlay').find('.alert-buttons').children();
+      if (type === 0) {
+        btns.on('click', function() {
+          $('#alert-overlay').removeClass('show-alert');
+          $(this).data('dtd').resolve();
+        });
+      } else if (type === 1) {
+        btns.filter('.btn-ok').on('click', function() {
+          $('#alert-overlay').removeClass('show-alert');
+          $(this).data('dtd').resolve(true);
+        })
+        .siblings('.btn-cancel').on('click', function() {
+          $('#alert-overlay').removeClass('show-alert');
+          $(this).data('dtd').resolve(false);
+        });
+      } else {
+
+      }
+    };
+    // With the help of the following function, we enfore browser to repaint in order to
+    // fire up the first time transition of alert icon.
+    var startIconTransition = function() {
+      var overlay = $('#alert-overlay')[0];
+      overlay.style.offsetWidth = overlay.offsetWidth;
+      overlay.classList.add('show-alert');
+    };
     if (type === 0) { // alert box
       if (!$('.custom-alert').length) {
-        $('body').append(
-          '<div id="alert-overlay">' +
-            '<div class="custom-alert alert-box">' +
-              '<span class="alert-icon">?</span>' +
-              '<p class="alert-message"></p>' +
-              '<div class="alert-buttons">' +
-                '<button type="button" class="btn btn-primary btn-ok">OK</button>' +
-              '</div>' +
-            '</div>' +
-          '</div>')
-          .find('#alert-overlay').find('.alert-message').text(message)
-          .siblings('.alert-buttons').children().data('dtd', dtd)
-          .on('click', function() {
-            $('#alert-overlay').removeClass('show-alert');
-            $(this).data('dtd').resolve();
-          });
-          // With the help of the following line, we enfore browser to repaint in order to
-          // fire up the first time transition of alert icon.
-          var overlay = $('#alert-overlay')[0];
-          overlay.style.offsetWidth = overlay.offsetWidth;
-          overlay.classList.add('show-alert');
+        appendCustomAlert();
+        appendAlertButtons(0);
+        bindButtonHandler(0);
+        startIconTransition();
       } else if (!$('.alert-box').length) {
-        $('#alert-overlay').find('.alert-buttons').children().remove()
-          .end().append('<button type="button" class="btn btn-primary btn-ok">OK</button>')
-          .children().data('dtd', dtd)
-          .on('click', function() {
-            $('#alert-overlay').removeClass('show-alert');
-            $(this).data('dtd').resolve();
-          })
-          .parent().siblings('.alert-icon').text('!')
-          .siblings('.alert-message').text(message)
-          .parent().attr('class', 'custom-alert alert-box')
-          .parent().addClass('show-alert');
-      } else {
-        $('#alert-overlay').find('.alert-buttons').children().data('dtd', dtd)
-          .closest('#alert-overlay').addClass('show-alert');
+        appendAlertButtons(0);
+        bindButtonHandler(0);
       }
+      $('#alert-overlay').find('.custom-alert').attr('class', 'custom-alert alert-box')
+        .find('.alert-icon').text('!');
     } else if (type === 1) { // confirm box
       if (!$('.custom-alert').length) {
-        $('body').append(
-          '<div id="alert-overlay">' +
-            '<div class="custom-alert confirm-box">' +
-              '<span class="alert-icon">?</span>' +
-              '<p class="alert-message"></p>' +
-              '<div class="alert-buttons">' +
-                '<button type="button" class="btn btn-primary btn-ok">OK</button>' +
-                '<button type="button" class="btn btn-default btn-cancel">Cancel</button>' +
-              '</div>' +
-            '</div>' +
-          '</div>')
-          .find('#alert-overlay').find('.alert-message').text(message)
-          .siblings('.alert-buttons').children().data('dtd', dtd)
-          .filter('.btn-ok').on('click', function() {
-            $('#alert-overlay').removeClass('show-alert');
-            $(this).data('dtd').resolve(true);
-          })
-          .siblings('.btn-cancel').on('click', function() {
-            $('#alert-overlay').removeClass('show-alert');
-            $(this).data('dtd').resolve(false);
-          });
-          // With the help of the following line, we enfore browser to repaint in order to
-          // fire up the first time transition of alert icon.
-          var overlay = $('#alert-overlay')[0];
-          overlay.style.offsetWidth = overlay.offsetWidth;
-          overlay.classList.add('show-alert');
+        appendCustomAlert();
+        appendAlertButtons(1);
+        bindButtonHandler(1);
+        startIconTransition();
       } else if (!$('.confirm-box').length) {
-        var box = $('#alert-overlay').find('.custom-alert');
-        if (box.is('.alert-box')) {
-          box.find('.alert-buttons').children().remove()
-            .end().append('<button type="button" class="btn btn-primary btn-ok">OK</button>' +
-            '<button type="button" class="btn btn-default btn-cancel">Cancel</button>')
-            .children().filter('.btn-ok').on('click', function() {
-              $('#alert-overlay').removeClass('show-alert');
-              $(this).data('dtd').resolve(true);
-            })
-            .siblings('.btn-cancel').on('click', function() {
-              $('#alert-overlay').removeClass('show-alert');
-              $(this).data('dtd').resolve(false);
-            });
-        }
-        box.find('.alert-buttons').children().data('dtd', dtd)
-          .parent().siblings('.alert-icon').text('?')
-          .siblings('.alert-message').text(message)
-          .parent().attr('class', 'custom-alert confirm-box')
-          .parent().addClass('show-alert');
-      } else {
-        $('#alert-overlay').find('.alert-buttons').children().data('dtd', dtd)
-          .closest('#alert-overlay').addClass('show-alert');
+        appendAlertButtons(1);
+        bindButtonHandler(1);
       }
+      $('#alert-overlay').find('.custom-alert').attr('class', 'custom-alert confirm-box')
+        .find('.alert-icon').text('?');
     } else { // prompt box
 
     }
+
+    $('#alert-overlay').find('.alert-buttons').children().data('dtd', dtd)
+      .end().siblings('.alert-message').text(message)
+      .closest('#alert-overlay').addClass('show-alert');
 
     return dtd;
   }
@@ -113,6 +97,13 @@
       var alertBox = customAlert(0, 'An exception occurred.');
       $.when(alertBox).then(function() {
         $('#response').text('The application has just got an exception.');
+      });
+    });
+
+    $('#btn-alert2').on('click', function () {
+      var alertBox = customAlert(0, 'Another exception occurred.');
+      $.when(alertBox).then(function() {
+        $('#response').text('The application has just got another exception.');
       });
     });
 
