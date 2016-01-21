@@ -50,6 +50,14 @@
             .find('.custom-alert').data('dtd').resolve(false);
         });
       } else {
+        overlay.find('.alert-input').on('keyup', function(event) {
+          if (event.which === 13) {
+            var value = event.target.value.trim();
+            overlay.removeClass('show-alert')
+              .find('.alert-input').val(defaultText)
+              .parent().data('dtd').resolve(value);
+          }
+        });
         btns.filter('.btn-ok').on('click', function() {
           var value = overlay.find('.alert-input').val().trim();
           overlay.removeClass('show-alert')
@@ -113,7 +121,7 @@
       }
       $('#alert-overlay').find('.custom-alert').attr('class', 'custom-alert prompt-box')
         .find('.alert-icon').text(':)')
-        .siblings('.alert-input').val(defaultText);
+        .siblings('.alert-input').val(defaultText).select();
     }
 
     $('#alert-overlay').addClass('show-alert')
