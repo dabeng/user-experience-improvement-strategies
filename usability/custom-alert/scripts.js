@@ -32,26 +32,42 @@
           '<button type="button" class="btn btn-default btn-cancel">Cancel</button>');
       }
     };
+    var appendDisableScrollbar = function() {
+      if ($(document).height() > $(window).height()) {
+        var topOffset = $(document).scrollTop();
+        $('body').addClass('disable-scrollbar').css('top', -topOffset + 'px').data('scrolltop', topOffset);
+      }
+    };
+    var recoverOriginalScrollbar = function() {
+      if ($(document).height() > $(window).height()) {
+        $('body').removeClass('disable-scrollbar').css('top','');
+        $(document).scrollTop($('body').data('scrolltop')); // compatible wirting for Chrome and Firefox
+      }
+    };
     var bindButtonHandler = function(type) {
       var overlay = $('#alert-overlay');
       var btns = overlay.find('.alert-buttons').children();
       if (type === 0) {
         btns.on('click', function() {
+          recoverOriginalScrollbar();
           overlay.removeClass('show-alert')
             .find('.custom-alert').data('dtd').resolve();
         });
       } else if (type === 1) {
         btns.filter('.btn-ok').on('click', function() {
+          recoverOriginalScrollbar();
           overlay.removeClass('show-alert')
             .find('.custom-alert').data('dtd').resolve(true);
         })
         .siblings('.btn-cancel').on('click', function() {
+          recoverOriginalScrollbar();
           overlay.removeClass('show-alert')
             .find('.custom-alert').data('dtd').resolve(false);
         });
       } else {
         overlay.find('.alert-input').on('keyup', function(event) {
           if (event.which === 13) {
+            recoverOriginalScrollbar();
             var value = event.target.value.trim();
             overlay.removeClass('show-alert')
               .find('.alert-input').val(defaultText)
@@ -59,12 +75,14 @@
           }
         });
         btns.filter('.btn-ok').on('click', function() {
+          recoverOriginalScrollbar();
           var value = overlay.find('.alert-input').val().trim();
           overlay.removeClass('show-alert')
             .find('.alert-input').val(defaultText)
             .parent().data('dtd').resolve(value);
         })
         .siblings('.btn-cancel').on('click', function() {
+          recoverOriginalScrollbar();
           overlay.removeClass('show-alert')
             .find('.alert-input').val(defaultText)
             .parent().data('dtd').resolve('');
@@ -123,7 +141,7 @@
         .find('.alert-icon').text(':)')
         .siblings('.alert-input').val(defaultText).select();
     }
-
+    appendDisableScrollbar();
     $('#alert-overlay').addClass('show-alert')
       .find('.custom-alert').data('dtd', dtd)
       .find('.alert-message').text(message);
@@ -141,13 +159,6 @@
       var alertBox = customAlert(0, 'An exception occurred.');
       $.when(alertBox).then(function() {
         $('#response').text('The application has just got an exception.');
-      });
-    });
-
-    $('#btn-alert2').on('click', function () {
-      var alertBox = customAlert(0, 'Another exception occurred.');
-      $.when(alertBox).then(function() {
-        $('#response').text('The application has just got another exception.');
       });
     });
 

@@ -1,7 +1,7 @@
-#response {
-  border: 2px dashed #aaa;
-  border-radius: 5px;
-  padding: 20px;
+.disable-scrollbar {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 #alert-overlay {
@@ -14,7 +14,6 @@
 
 #alert-overlay.show-alert {
   opacity: 1;
-  overflow: auto;
   position: fixed;
   height: auto;
   top: 0px;
@@ -45,7 +44,7 @@
   width: 118px;
   height: 118px;
   line-height: 118px;
-  font-size: 118px;
+  font-size: 100px;
   color: #fff;
   transition: text-shadow 0.3s ease, box-shadow 0.3s ease;
   -moz-transition: text-shadow 0.3s ease, box-shadow 0.3s ease;
@@ -104,5 +103,11 @@
 
 .alert-buttons .btn {
   margin-left: 10px;
+}
+
+#response {
+  border: 2px dashed #aaa;
+  border-radius: 5px;
+  padding: 20px;
 }
 
