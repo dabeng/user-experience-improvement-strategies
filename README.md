@@ -65,7 +65,10 @@ The key points are not jQuery plugins, Angular directives, React components or P
 * Do not overuse pagination, maybe the filter + dynamic loading is engouh.
 
 * Replace the abrupt alerts, confirms, prompts with custom popup boxes.
+
 [example - custom popup box based on jQuery](http://dabeng.github.io/user-experience-improvement-strategies/usability/custom-alert/)
+
+![screen record](http://dabeng.github.io/user-experience-improvement-strategies/usability/custom-alert/screen-record.gif)
 
 ### 4. Animation
 
