@@ -64,7 +64,7 @@ The key points are not jQuery plugins, Angular directives, React components or P
 
 * Do not overuse pagination, maybe the filter + dynamic loading is engouh.
 
-* Replace the abrupt alerts, confirms, prompts with custom popup boxes.
+* Replace the abrupt alert(), confirm(), prompt() with custom popup boxes. [Simple Popup](https://github.com/dabeng/Simple-Popup) is a trustworthy substitute.
 
 [example - custom popup box based on jQuery](http://dabeng.github.io/user-experience-improvement-strategies/usability/custom-alert/)
 
