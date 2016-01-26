@@ -1,0 +1,47 @@
+.tag-pool {
+  border: 1px dashed #337ab7;
+  border-radius: 5px 5px 0px 5px;
+  padding: 1em 0.5em 0.5em 1em;
+  outline: none;
+  min-height: 6.8em;
+  max-height: 9.2em;
+  overflow-y: auto;
+}
+
+.tag-pool .tag {
+  padding: 0.2em 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  cursor: pointer;
+  float: left;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.tag-pool .tag-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #337ab7;
+}
+
+.tag-pool .tag.selected {
+  border-color: #337ab7;
+  box-shadow: 0 0 6px #337ab7;
+}
+
+.tag-pool .tag.deleted {
+  display: none;
+}
+
+.tag-buttons {
+  padding: 0.5em 0.5em;
+  border: 1px dashed #337ab7;
+  border-top: 1px solid #fff;
+  margin-top: -1px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.tag-buttons .btn {
+  /*float: right;*/
+}
+
