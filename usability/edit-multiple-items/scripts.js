@@ -34,7 +34,11 @@
   }
 
   function saveEditTag(event) {
-    alert($(event.target).closest('.tag-pool-wrapper').find('.tag-pool').children().contents());
+    var valueList = [];
+    $(event.target).closest('.tag-pool-wrapper').find('.tag-pool').children('.tag')
+      .not('.deleted').each(function(index, item) {
+        valueList.push($(item).text());
+    });
   }
 
   function cancelEditTag(event) {
