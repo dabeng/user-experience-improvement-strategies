@@ -18,8 +18,6 @@
       } else {
         $this.val('');
       }
-    } else if (event.which === 8 || event.which === 46) {
-      $(this)
     }
   }
 
@@ -36,13 +34,15 @@
   function saveEditTag(event) {
     var valueList = [];
     $(event.target).closest('.tag-pool-wrapper').find('.tag-pool').children('.tag')
-      .not('.deleted').each(function(index, item) {
+      .removeClass('selected').not('.deleted').each(function(index, item) {
         valueList.push($(item).text());
-    });
+      });
+    $('#results').find('span').text(valueList.join());
   }
 
   function cancelEditTag(event) {
     $(event.target).closest('.tag-pool-wrapper').find('.tag-pool').children()
+      .removeClass('selected')
       .filter('.added').remove()
       .end().filter('.deleted').removeClass('deleted');
   }
